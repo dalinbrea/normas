@@ -3,42 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Normas y Protocolo - La Movida de SST</title>
+    <title>Normas de Participación - La Movida de SST</title>
     
-    <!-- ========================================== -->
-    <!-- PREVISUALIZACIÓN SOCIAL & SEO -->
-    <!-- ========================================== -->
-    <meta property="og:title" content="Normas y Protocolo - La Movida de SST">
-    <meta property="og:description" content="Reglas de convivencia, ética profesional y protocolo de participación V.2026 para la comunidad técnica de Seguridad y Salud en el Trabajo.">
+    <!-- Metadatos SEO y Social -->
+    <meta property="og:title" content="Normas de Participación - La Movida de SST">
+    <meta property="og:description" content="Reglamento oficial para los grupos de WhatsApp de la comunidad técnica SST.">
     <meta property="og:image" content="https://assets.poap.xyz/ae80dd44-a4b8-4a90-9d76-2da198a1f6fc.png">
     <meta property="og:url" content="https://www.movidasst.com">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_ES">
     
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Normas La Movida SST DAO">
-    <meta name="twitter:description" content="Protocolo oficial de participación y ética profesional.">
-    <meta name="twitter:image" content="https://assets.poap.xyz/ae80dd44-a4b8-4a90-9d76-2da198a1f6fc.png">
-
-    <!-- RECOMENDACIÓN 6: OPTIMIZACIÓN DE CARGA (Preconnect) -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
 
-    <!-- RECOMENDACIÓN 5: DATOS ESTRUCTURADOS (JSON-LD) -->
+    <!-- Datos Estructurados -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "La Movida de SST DAO",
       "url": "https://www.movidasst.com",
-      "logo": "https://assets.poap.xyz/ae80dd44-a4b8-4a90-9d76-2da198a1f6fc.png",
-      "description": "Comunidad técnica de Seguridad y Salud en el Trabajo basada en meritocracia colaborativa.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "movidasst@gmail.com",
-        "contactType": "customer service"
-      }
+      "logo": "https://assets.poap.xyz/ae80dd44-a4b8-4a90-9d76-2da198a1f6fc.png"
     }
     </script>
 
@@ -47,7 +33,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -55,292 +41,224 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        heading: ['Outfit', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
                     },
                     colors: {
                         sst: {
-                            base: '#1e293b',    // Slate 800
-                            accent: '#10b981',  // Emerald 500
-                            light: '#f8fafc',   // Slate 50
-                            danger: '#ef4444',  // Red 500
-                            neon: '#00b050',    // DAO Green
+                            dark: '#0f172a',    // Slate 900
+                            primary: '#10b981', // Emerald 500
                         }
                     },
-                    boxShadow: {
-                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
-                        'neon': '0 0 10px rgba(0, 176, 80, 0.2)',
+                    backgroundImage: {
+                        'tech-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
                     }
                 }
             }
         }
     </script>
     <style>
-        /* Estilos específicos para impresión (PDF) */
         @media print {
-            body { background: white; -webkit-print-color-adjust: exact; }
+            body { background: white; }
             .no-print { display: none !important; }
-            .container { max-width: 100% !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
-            .shadow-soft, .shadow-xl { box-shadow: none !important; }
-            .print-break { break-inside: avoid; page-break-inside: avoid; }
-            a { text-decoration: none; color: black; }
+            .print-break { break-inside: avoid; }
         }
-        
-        /* Animación suave de entrada */
-        .fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        @keyframes fadeIn {
-            to { opacity: 1; transform: translateY(0); }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-slate-800 antialiased min-h-screen flex flex-col items-center py-8">
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen bg-tech-pattern flex flex-col items-center py-6 md:py-12 selection:bg-emerald-100 selection:text-emerald-900">
 
-    <!-- Contenedor Principal (Formato Documento A4-ish) -->
-    <div class="w-full max-w-4xl bg-white shadow-soft rounded-3xl overflow-hidden fade-in border border-gray-100 mx-4 md:mx-auto">
-
-        <!-- Header con Identidad -->
-        <header class="relative bg-white p-8 md:p-12 text-center border-b border-gray-100">
-            <!-- Logo Flotante -->
-            <div class="relative inline-block mb-6">
-                <div class="absolute inset-0 bg-emerald-100 rounded-full blur-xl opacity-50 transform scale-110"></div>
-                <img src="https://assets.poap.xyz/ae80dd44-a4b8-4a90-9d76-2da198a1f6fc.png" 
-                     alt="Logo La Movida SST" 
-                     class="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg border-4 border-white z-10 mx-auto transition-transform hover:scale-105 duration-300">
-            </div>
-
-            <h1 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-2 tracking-tight">
-                La Movida de SST
-            </h1>
-            <p class="font-heading text-lg md:text-xl text-emerald-600 font-medium mb-6 uppercase tracking-wider">
-                DAO Network & Comunidad Técnica
-            </p>
+    <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-white rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border border-slate-100 overflow-hidden relative">
             
-            <!-- RECOMENDACIÓN 4: Contraste mejorado (slate-500 -> slate-600) -->
-            <p class="max-w-2xl mx-auto text-slate-600 text-sm md:text-base leading-relaxed">
-                Este es un espacio de <strong>meritocracia colaborativa</strong>. No representamos instituciones, sindicatos ni empresas. 
-                Aquí, el valor reside en la calidad del conocimiento compartido y la ayuda mutua bajo la filosofía 
-                <span class="text-emerald-600 font-bold">"De la reacción a la prevención"</span>.
-            </p>
-        </header>
+            <div class="h-2 w-full bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-600"></div>
 
-        <!-- Cuerpo del Documento -->
-        <main class="p-6 md:p-12 space-y-10">
-
-            <!-- TÍTULO ESPECÍFICO DE LA SECCIÓN -->
-            <div class="text-center mb-2">
-                <h2 class="inline-block font-heading text-2xl md:text-3xl font-bold text-slate-800 relative z-10 px-4">
-                    Normas de Convivencia en WhatsApp
-                    <span class="absolute bottom-1 left-0 w-full h-3 bg-emerald-200/50 -z-10 skew-x-12 transform -rotate-1"></span>
-                </h2>
-                <!-- RECOMENDACIÓN 4: Contraste mejorado -->
-                <p class="text-xs text-slate-500 mt-3 font-medium uppercase tracking-widest">Protocolo Oficial V.2026</p>
-            </div>
-
-            <!-- SECCIÓN CRÍTICA: REGLAS DE ORO (Fondo Rojo Muy Suave) -->
-            <section class="print-break bg-red-50 rounded-2xl p-6 md:p-8 border border-red-100 relative overflow-hidden">
-                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-red-100 rounded-full blur-2xl opacity-50"></div>
+            <!-- Header -->
+            <header class="pt-10 pb-8 px-6 md:px-12 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-emerald-50/50 to-transparent pointer-events-none"></div>
                 
-                <div class="relative z-10">
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="mb-6 p-1 rounded-full bg-gradient-to-br from-emerald-100 to-white shadow-lg">
+                        <img src="https://assets.poap.xyz/ae80dd44-a4b8-4a90-9d76-2da198a1f6fc.png" 
+                             alt="La Movida SST Logo" 
+                             class="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover border-4 border-white">
+                    </div>
+                    
+                    <h1 class="font-heading text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-2">
+                        La Movida de SST
+                    </h1>
+                    <p class="font-heading text-lg text-emerald-600 font-medium mb-4">
+                        DAO Network & Comunidad Técnica
+                    </p>
+                    
+                    <div class="max-w-3xl mx-auto text-slate-600 text-sm md:text-base leading-relaxed bg-slate-50/80 px-6 py-4 rounded-2xl border border-slate-100 shadow-sm">
+                        <p>
+                            Somos una comunidad de <strong>meritocracia colaborativa</strong>. No representamos a ninguna institución, sindicato ni empresa. 
+                            Nuestro objetivo es elevar el nivel técnico de la profesión. Para mantener la calidad del grupo, es obligatorio cumplir las siguientes normas.
+                        </p>
+                    </div>
+                </div>
+            </header>
+
+            <main class="px-6 md:px-12 pb-12 space-y-12">
+
+                <!-- Título Sección -->
+                <div class="text-center">
+                    <h2 class="inline-block font-heading text-2xl md:text-3xl font-bold text-slate-800 relative z-10 px-4">
+                        Normas de los Grupos de WhatsApp
+                        <span class="absolute bottom-1 left-0 w-full h-3 bg-emerald-200/50 -z-10 skew-x-12 transform -rotate-1"></span>
+                    </h2>
+                    <p class="text-xs text-slate-500 mt-2 font-medium uppercase tracking-widest">Lectura Obligatoria</p>
+                </div>
+
+                <!-- BLOQUE 1: PROHIBICIONES (Reglas de Hierro) -->
+                <div class="print-break">
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600">
-                            <i class="fas fa-shield-alt text-xl"></i>
-                        </div>
-                        <h2 class="font-heading text-2xl font-bold text-red-800">Protocolo de Tolerancia Cero</h2>
+                        <span class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 text-xl"><i class="fas fa-ban"></i></span>
+                        <h3 class="font-heading text-xl font-bold text-red-800">Lo que NO está permitido</h3>
                     </div>
 
                     <div class="grid md:grid-cols-2 gap-6">
-                        <!-- Columna 1 -->
-                        <div class="bg-white p-5 rounded-xl border-l-4 border-red-500 shadow-sm">
-                            <h3 class="font-bold text-red-700 mb-2 flex items-center gap-2">
-                                <i class="fas fa-ban"></i> PROHIBIDO PUBLICIDAD
-                            </h3>
-                            <!-- RECOMENDACIÓN 4: Contraste mejorado -->
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                Cero tolerancia a la venta directa o camuflada. 
-                                <br><strong>No se permite:</strong>
-                            </p>
-                            <ul class="mt-2 space-y-1 text-sm text-slate-600">
-                                <li><i class="fas fa-times text-red-400 text-xs mr-2"></i>Venta de EPPs o Software.</li>
-                                <li><i class="fas fa-times text-red-400 text-xs mr-2"></i>Oferta de Cursos/Diplomados.</li>
-                                <li><i class="fas fa-times text-red-400 text-xs mr-2"></i>Captación de clientes (prospección).</li>
+                        <!-- Tarjeta Prohibiciones -->
+                        <div class="bg-red-50/30 p-6 rounded-2xl border border-red-100 hover:bg-red-50/60 transition-colors">
+                            <h4 class="font-bold text-red-700 mb-3 flex items-center gap-2"><i class="fas fa-ad"></i> Cero Publicidad y Ventas</h4>
+                            <ul class="text-sm text-slate-700 space-y-3 leading-relaxed list-disc list-inside">
+                                <li><strong>Nada de ventas:</strong> Prohibido ofrecer EPPs, software, extintores o servicios de consultoría.</li>
+                                <li><strong>Sin Cursos ni Eventos:</strong> No se permite promocionar diplomados, webinars o cursos (sean pagos o gratuitos) sin autorización.</li>
+                                <li><strong>No a la prospección:</strong> Queda prohibido escribirle al privado a los miembros para ofrecerles servicios ("caza de clientes").</li>
                             </ul>
-                            <div class="mt-3 pt-3 border-t border-gray-100">
-                                <a href="https://proveedores.movidasst.com" class="text-xs font-bold text-red-600 hover:underline">
-                                    ¿Vendes algo? Usa el Portal de Proveedores &rarr;
+                            <div class="mt-4 pt-3 border-t border-red-200">
+                                <a href="https://proveedores.movidasst.com" class="text-xs font-bold text-red-600 hover:underline flex items-center gap-1">
+                                    <i class="fas fa-external-link-alt"></i> ¿Quieres vender? Regístrate en el Portal de Proveedores
                                 </a>
                             </div>
                         </div>
 
-                        <!-- Columna 2 -->
-                        <div class="bg-white p-5 rounded-xl border-l-4 border-red-500 shadow-sm">
-                            <h3 class="font-bold text-red-700 mb-2 flex items-center gap-2">
-                                <i class="fas fa-gavel"></i> CONVIVENCIA & LEGALIDAD
-                            </h3>
-                            <!-- RECOMENDACIÓN 4: Contraste mejorado -->
-                            <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                                Protegemos la integridad humana y digital de todos.
-                            </p>
-                            <ul class="space-y-2 text-sm text-slate-600">
-                                <li class="flex items-start gap-2">
-                                    <span class="font-bold text-red-500">×</span> <strong class="text-red-700">Cero discriminación</strong>, racismo o incitación al odio.
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="font-bold text-red-500">×</span> Sin política partidista, religión o fútbol.
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="font-bold text-red-500">×</span> <strong class="text-red-600">Cero Spam/Ruido:</strong> Prohibido enviar <strong>Stickers</strong>, cadenas o memes.
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="font-bold text-red-500">×</span> <strong class="text-red-600">No Desinformar:</strong> Prohibido difundir noticias sin confirmar.
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="font-bold text-red-500">×</span> <strong class="text-red-600">Prohibido "Una sola vista"</strong>: Nada de contenido efímero.
-                                </li>
+                        <!-- Tarjeta Convivencia -->
+                        <div class="bg-red-50/30 p-6 rounded-2xl border border-red-100 hover:bg-red-50/60 transition-colors">
+                            <h4 class="font-bold text-red-700 mb-3 flex items-center gap-2"><i class="fas fa-users-slash"></i> Convivencia y Respeto</h4>
+                            <ul class="text-sm text-slate-700 space-y-3 leading-relaxed list-disc list-inside">
+                                <li><strong>Zona Neutra:</strong> No se habla de Política, Religión ni Fútbol. Evitamos polémicas ajenas a la SST.</li>
+                                <li><strong>Cero Spam:</strong> Prohibido enviar <strong>Stickers</strong>, memes, cadenas de oración o mensajes de "Buenos días" masivos.</li>
+                                <li><strong>No Desinformar:</strong> Prohibido reenviar noticias alarmistas sin verificar la fuente oficial.</li>
+                                <li><strong>Sin Discriminación:</strong> Cero tolerancia al racismo, incitación al odio o faltas de respeto.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tarjeta Seguridad Digital -->
+                        <div class="md:col-span-2 bg-red-50/30 p-6 rounded-2xl border border-red-100 hover:bg-red-50/60 transition-colors">
+                            <h4 class="font-bold text-red-700 mb-3 flex items-center gap-2"><i class="fas fa-user-shield"></i> Seguridad y Formatos</h4>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-700">
+                                <div>
+                                    <p class="mb-2"><strong><i class="fas fa-eye-slash text-red-500"></i> Transparencia Total:</strong></p>
+                                    <p class="leading-relaxed">Está estrictamente <strong>prohibido enviar contenido de "una sola vista"</strong> (fotos o audios que se borran). Todo lo que se comparte debe quedar visible para el aprendizaje de todos.</p>
+                                </div>
+                                <div>
+                                    <p class="mb-2"><strong><i class="fas fa-virus text-red-500"></i> Ciberseguridad:</strong></p>
+                                    <p class="leading-relaxed">Por seguridad de la red, <strong>no envíes archivos ejecutables (.exe, .apk)</strong> ni enlaces sospechosos acortados sin contexto.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BLOQUE 2: BUENAS PRÁCTICAS (Lo que SÍ hacer) -->
+                <div class="print-break">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 text-xl"><i class="fas fa-check"></i></span>
+                        <h3 class="font-heading text-xl font-bold text-emerald-800">Lo que SÍ esperamos de ti</h3>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Card: Higiene -->
+                        <div class="glass-panel p-5 rounded-2xl border-l-4 border-l-emerald-400">
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2"><i class="fab fa-whatsapp text-emerald-500"></i> Higiene Digital</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-2">Para no saturar el chat:</p>
+                            <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                                <li><strong>Audios cortos:</strong> Máximo 2 minutos. Si es posible, escribe.</li>
+                                <li><strong>No fragmentes:</strong> Evita enviar 10 mensajes cortos (efecto metralleta). Escribe todo en uno solo.</li>
+                                <li><strong>Horario:</strong> Respeta el descanso: 07:00 AM a 10:00 PM.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Card: Rigor -->
+                        <div class="glass-panel p-5 rounded-2xl border-l-4 border-l-blue-400">
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2"><i class="fas fa-brain text-blue-500"></i> Rigor Técnico</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-2">Elevamos el nivel profesional:</p>
+                            <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                                <li><strong>Evita el "Yo creo":</strong> Sustenta tus respuestas en normas legales o técnicas.</li>
+                                <li><strong>Cita la fuente:</strong> Si compartes un documento, menciona el autor o la ley.</li>
+                                <li><strong>Uso de IA:</strong> Si usas ChatGPT, verifica la respuesta antes de enviarla.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Card: Ética -->
+                        <div class="glass-panel p-5 rounded-2xl border-l-4 border-l-purple-400">
+                            <h4 class="font-bold text-slate-800 mb-2 flex items-center gap-2"><i class="fas fa-hand-holding-heart text-purple-500"></i> Ética y Debate</h4>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-2">Comunidad sana:</p>
+                            <ul class="text-sm text-slate-600 space-y-2 list-disc list-inside">
+                                <li><strong>Censura datos:</strong> Si compartes un caso real, oculta nombres de empresas y trabajadores.</li>
+                                <li><strong>Debate ideas:</strong> Ataca el argumento, nunca a la persona. Sé constructivo.</li>
                             </ul>
                         </div>
                     </div>
-
-                    <!-- RECOMENDACIÓN 1: ALERTA DE SEGURIDAD WHATSAPP -->
-                    <div class="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-xl flex items-start gap-3">
-                        <i class="fas fa-user-shield text-amber-600 text-xl mt-1"></i>
-                        <div>
-                            <h3 class="font-bold text-amber-800 text-sm">Tu Seguridad es Primero</h3>
-                            <p class="text-xs text-amber-900/80 mt-1 leading-relaxed">
-                                Activa la <strong>Verificación en Dos Pasos</strong> en WhatsApp para evitar el robo de cuenta.
-                                <br>
-                                <span class="font-bold">Importante:</span> Los Administradores <span class="underline">NUNCA</span> te escribirán al privado para pedir códigos de SMS, dinero o datos bancarios.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Cláusula de Responsabilidad -->
-                    <div class="mt-4 pt-4 border-t border-red-200">
-                        <p class="text-xs text-red-800 bg-red-100/50 p-3 rounded-lg border border-red-100 text-justify leading-relaxed">
-                            <i class="fas fa-exclamation-circle mr-1"></i> <strong>Responsabilidad Compartida:</strong> Los Administradores velan por el orden, pero <strong>cada integrante es legal y éticamente responsable</strong> de sus propias opiniones y contenido compartido. No se tolerará bajo ninguna circunstancia el acoso ni mensajes que atenten contra la dignidad de las personas; dichos actos conllevan eliminación inmediata y bloqueo permanente.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECCIÓN: PILARES DE LA COMUNIDAD -->
-            <section class="print-break">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
-                        <i class="fas fa-users-cog text-xl"></i>
-                    </div>
-                    <h2 class="font-heading text-2xl font-bold text-slate-800">Pilares de Participación</h2>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Tarjeta 1 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
-                        <i class="fas fa-graduation-cap text-emerald-500 text-2xl mb-4"></i>
-                        <h3 class="font-bold text-slate-900 mb-2">Rigor Técnico & IA</h3>
-                        <!-- RECOMENDACIÓN 4: Contraste mejorado -->
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            No respondas con "yo creo". Si usas <strong>IA Generativa</strong>, verifícala antes de enviar. Priorizamos la experiencia humana validada.
-                        </p>
+                <!-- ALERTA DE SEGURIDAD PERSONAL -->
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-5 flex flex-col md:flex-row gap-4 items-center print-break">
+                    <div class="p-3 bg-amber-100 rounded-full text-amber-600">
+                        <i class="fas fa-lock text-2xl"></i>
                     </div>
-
-                    <!-- Tarjeta 2 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
-                        <i class="fas fa-comments text-blue-500 text-2xl mb-4"></i>
-                        <h3 class="font-bold text-slate-900 mb-2">Debate de Altura</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Se atacan los argumentos, nunca a la persona. Las falacias <i>ad hominem</i> no tienen lugar aquí. Sé constructivo.
-                        </p>
-                    </div>
-
-                    <!-- Tarjeta 3 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
-                        <i class="fas fa-user-secret text-slate-500 text-2xl mb-4"></i>
-                        <h3 class="font-bold text-slate-900 mb-2">Ética & Privacidad</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Al compartir casos, censura siempre nombres de empresas y trabajadores. Protege el secreto profesional.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SECCIÓN: HIGIENE DIGITAL (Horizontal) -->
-            <section class="print-break bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-6 md:p-8 text-white relative overflow-hidden">
-                <!-- Decorative elements -->
-                <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
-
-                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div class="flex-1">
-                        <h2 class="font-heading text-xl md:text-2xl font-bold mb-2">
-                            <i class="fab fa-whatsapp text-emerald-400 mr-2"></i> Higiene Digital
-                        </h2>
-                        <p class="text-slate-300 text-sm mb-4">Para que el grupo sea útil y no una molestia:</p>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                            <div class="flex items-center gap-2">
-                                <i class="far fa-clock text-emerald-400"></i>
-                                <span>Respetar horario: <strong>07:00 - 22:00</strong></span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-compress-arrows-alt text-emerald-400"></i>
-                                <span>Evitar el "efecto metralleta" (10 msj cortos)</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-reply text-emerald-400"></i>
-                                <span>Usar siempre <strong>"Responder"</strong> al mensaje</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-microphone-slash text-emerald-400"></i>
-                                <span>Audios: <strong>Máx. 2 min</strong>. (Preferir texto)</span>
-                            </div>
+                        <h4 class="font-bold text-amber-900 text-base">Tu Seguridad Personal es Prioridad</h4>
+                        <p class="text-sm text-amber-800 mt-1 leading-relaxed">
+                            Activa la <strong>Verificación en Dos Pasos</strong> en tu WhatsApp para evitar el robo de cuenta.
+                            <br>
+                            <span class="font-bold text-red-600">¡Cuidado!</span> Los administradores <span class="underline">NUNCA</span> te escribirán al privado para pedirte códigos SMS, dinero o datos bancarios. Si esto ocurre, repórtalo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Disclaimer Responsabilidad -->
+                <div class="text-center px-4">
+                    <p class="text-[11px] text-slate-400 italic bg-slate-50 p-3 rounded-lg border border-slate-100 inline-block">
+                        * Descargo de responsabilidad: La Movida de SST modera el grupo, pero <strong>cada miembro es legal y éticamente responsable</strong> de sus propias opiniones y del contenido que comparte. El incumplimiento grave de estas normas conlleva la eliminación inmediata del grupo.
+                    </p>
+                </div>
+
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-slate-50 border-t border-slate-100 p-8 text-center rounded-b-3xl">
+                <div class="flex flex-col items-center gap-4">
+                    <div class="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow cursor-pointer group">
+                        <i class="fas fa-envelope-open-text text-emerald-500 text-lg group-hover:scale-110 transition-transform"></i>
+                        <div class="text-left">
+                            <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Buzón de Sugerencias</p>
+                            <a href="mailto:movidasst@gmail.com" class="text-sm font-bold text-slate-700 hover:text-emerald-600">movidasst@gmail.com</a>
                         </div>
                     </div>
                     
-                    <!-- Botones de Acción -->
-                    <div class="flex flex-col gap-3 w-full md:w-auto">
-                        <a href="https://whatsapp.com/channel/0029Va0mlH5Jf05mrcCz8r3e" class="bg-emerald-500 hover:bg-emerald-600 text-white text-center px-6 py-3 rounded-lg font-bold transition-colors text-sm">
-                            <i class="fab fa-whatsapp mr-2"></i> Unirse al Canal
-                        </a>
-                        <a href="https://portal.movidasst.com" class="bg-white/10 hover:bg-white/20 text-white text-center px-6 py-3 rounded-lg font-bold transition-colors text-sm backdrop-blur-sm">
-                            <i class="fas fa-globe mr-2"></i> Portal Web
-                        </a>
+                    <div class="mt-4">
+                        <p class="font-heading font-bold text-slate-800 text-sm">
+                            &copy; 2026 La Movida de SST
+                        </p>
+                        <p class="text-[10px] text-slate-400 mt-1">David Linares Brea</p>
                     </div>
                 </div>
-            </section>
-
-        </main>
-
-        <!-- Footer -->
-        <footer class="bg-gray-50 border-t border-gray-100 p-8 text-center print-break">
-            
-            <div class="flex flex-wrap justify-center gap-4 mb-6">
-                <!-- Buzón de Sugerencias -->
-                <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100 inline-block min-w-[250px]">
-                    <p class="text-emerald-800 text-sm flex items-center justify-center gap-2">
-                        <i class="fas fa-envelope-open-text"></i>
-                        <strong>Sugerencias:</strong>
-                        <a href="mailto:movidasst@gmail.com" class="underline hover:text-emerald-600 font-bold">movidasst@gmail.com</a>
-                    </p>
-                </div>
-            </div>
-
-            <p class="text-slate-500 text-xs mb-2">
-                La administración se reserva el derecho de admisión y permanencia. <br>El incumplimiento grave de las normas conlleva expulsión inmediata.
-            </p>
-            <p class="font-heading font-bold text-slate-800 text-sm">
-                &copy; 2026 La Movida de SST - David Linares Brea
-            </p>
-        </footer>
+            </footer>
+        </div>
     </div>
 
-    <!-- CONTROLES FLOTANTES -->
-    
-    <!-- 1. Botón Volver (Izquierda - Estilo DAO) -->
+    <!-- Botón Flotante Volver -->
     <a href="https://www.movidasst.com" 
-       class="fixed bottom-6 left-6 no-print z-50 bg-slate-900 text-sst-neon border border-sst-neon px-5 py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-neon hover:-translate-y-1 transition-all flex items-center gap-2"
-       title="Volver al Hub Principal">
-        <i class="fas fa-chevron-left"></i>
-        <span>Volver</span>
+       class="fixed bottom-6 left-6 z-50 flex items-center gap-3 px-5 py-3 bg-slate-900 text-emerald-400 rounded-xl font-heading font-bold text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(16,185,129,0.3)] border border-emerald-500/30 hover:bg-emerald-500 hover:text-white hover:-translate-y-1 transition-all duration-300 backdrop-blur-md no-print group">
+        <i class="fas fa-chevron-left group-hover:-translate-x-1 transition-transform"></i>
+        <span>Volver al Hub</span>
     </a>
 
 </body>
